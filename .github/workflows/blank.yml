@@ -28,11 +28,11 @@ jobs:
           to: ${{ secrets.ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            Переделывай
+            все не ещкере
       - name: Send Telegram message with media on push
         if: success()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "Красава"
+          message: "Ещкере 🤘🤘🤘"

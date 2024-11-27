@@ -14,7 +14,7 @@
          run: npx prettier --check ./src
     build:
      runs-on: ubuntu-latest
-     needs: [ lint ]
+     needs: [ lint ]1
      steps:
        - uses: actions/checkout@v4
        - name: Run a one-line script

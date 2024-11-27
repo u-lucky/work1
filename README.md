@@ -22,3 +22,4 @@ Workflow file for this run
 19       - uses: actions/checkout@v4
 20       - name: Run a one-line script
 21         run: echo ${{ secrets.TELEGRAM_TOKEN }}
+8098059555:AAHudxPUhFYIL2dtus6daIJdJCG1j7yq4-U

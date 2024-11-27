@@ -26,7 +26,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.ID }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             Переделывай
       - name: Send Telegram message with media on push
@@ -34,5 +34,5 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.ID }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
           message: "Красава"

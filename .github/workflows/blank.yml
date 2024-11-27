@@ -1,21 +1,21 @@
-1  name: CI
-2  on:
-3    push:
-4      branches: [ "master" ]
-5    workflow_dispatch:
-6  jobs:
-7    lint:
-8      runs-on: ubuntu-latest
-9      steps:
-10       - uses: actions/checkout@v4
-11         - name: install dependencies
-12         run: npm install
-13       - name: check code style
-14         run: npx prettier --check ./src
-15  build:
-16     runs-on: ubuntu-latest
-17     needs: [ lint ]
-18     steps:
-19       - uses: actions/checkout@v4
-20       - name: Run a one-line script
-21         run: echo ${{ secrets.TELEGRAM_TOKEN }}
+  name: CI
+  on:
+    push:
+      branches: [ "master" ]
+    workflow_dispatch:
+  jobs:
+    lint:
+      runs-on: ubuntu-latest
+      steps:
+       - uses: actions/checkout@v4
+       - name: install dependencies
+         run: npm install
+       - name: check code style
+         run: npx prettier --check ./src
+    build:
+     runs-on: ubuntu-latest
+     needs: [ lint ]
+     steps:
+       - uses: actions/checkout@v4
+       - name: Run a one-line script
+         run: echo ${{ secrets.TELEGRAM_TOKEN }}
